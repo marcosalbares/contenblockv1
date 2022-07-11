@@ -136,10 +136,10 @@ function debounce (func, wait, immediate) {
 	localStorage.setItem('googlemapsapikeyforblock', mapsKey);
 }*/
 
-sdk.getContent(function (data) {
+/*sdk.getContent(function (data) {
 	console.log("getContent func");
 	console.log(document.getElementById('myh1').innerText);
-});
+});*/
 	
 function manageBlock(){
 	var1 = document.getElementById('var1').value;
@@ -151,13 +151,17 @@ function manageBlock(){
 
 sdk.getData(function (data) {
 	console.log("sdk.getData func");
+	console.log(data.var1);
+	var1 = data.var1 || "your text";
+	document.getElementById('var1').value = var1;
+	
 	/*address = data.address || '';
 	width = data.width || 400;
 	height = data.height || 300;
 	zoom = data.zoom || 15;
 	link = data.link || '';
-	mapsKey = data.mapsKey || localStorage.getItem('googlemapsapikeyforblock');*/
-	var1 = data.var1 || "original value";
+	mapsKey = data.mapsKey || localStorage.getItem('googlemapsapikeyforblock');
+	var1 = data.var1 || "original value";*/
 	/*paintSettings();
 	paintSliderValues();
 	paintMap();*/
