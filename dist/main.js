@@ -136,6 +136,11 @@ function debounce (func, wait, immediate) {
 	localStorage.setItem('googlemapsapikeyforblock', mapsKey);
 }*/
 
+sdk.getContent(function (data) {
+	console.log("getContent func");
+	console.log(document.getElementById('myh1'));
+});
+	
 function manageBlock(){
 	var1 = document.getElementById('var1').value;
 	sdk.setContent('<h1 id="myh1">'+var1+'</h1><br><br>%%[OUTPUT(CONCAT("asd", "/asd2"))]%%');
@@ -157,11 +162,6 @@ sdk.getData(function (data) {
 	paintSliderValues();
 	paintMap();*/
 	manageBlock();
-});
-
-sdk.getContent(function (data) {
-	console.log("getContent func");
-	console.log(document.getElementById('myh1'));
 });
 	
 document.getElementById('workspace').addEventListener("input", function () {
