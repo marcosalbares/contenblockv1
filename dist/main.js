@@ -138,7 +138,7 @@ function debounce (func, wait, immediate) {
 
 sdk.getContent(function (data) {
 	console.log("getContent func");
-	console.log(document.getElementById('myh1'));
+	console.log(document.getElementById('myh1').innerText);
 });
 	
 function manageBlock(){
